@@ -1,0 +1,18 @@
+1-Devo ter um arquivo.csv já disponível para utiização e utilizar esse comando:
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/arquivo.csv'
+INTO TABLE tbl_autores
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+Considerando meu arquivo com cabeçalho( por isso o IGNORE 1 ROWS ) e separado por vírgulas, irá funcionar:
+
+ID,Nome,Sobrenome
+1,Carl,Sagan
+2,Fábio,dos Reis
+3,Umberto,Eco
+4,Michael,Crichton
+5,Stephen,Hawking
+6,John,Emsley

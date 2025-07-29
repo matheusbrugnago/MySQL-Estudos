@@ -1,0 +1,34 @@
+1-Retirar Coluna da Tabela, que não existe mais!
+
+ALTER TABLE nome-tabela
+DROP COLUMN nome-coluna;
+
+2-Adicionar Coluna em Tabela, que ainda não existe
+
+ALTER TABLE tabela
+ADD  coluna tipo_dados constraints;
+
+3-Adicionar uma Chave Primária
+
+ALTER Table tabela
+ADD PRIMARY KEY( campo )
+
+4-Adicionar uma Chave Estrangeira
+
+ALTER TABLE tbl_livro
+ADD CONSTRAINT fk_ID_Autor
+FOREIGN KEY (ID_Autor)
+REFERENCES tbl_autores (ID_autor)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+5-Retirar uma Primary Key de uma Tabela
+
+ALTER TABLE tabela
+DROP PRIMARY KEY;
+
+6-Alterar o Tipo do Campo da Tabela
+
+ALTER TABLE tbl_Livro
+MODIFY COLUMN ID_Autor SMALLINT;
+

@@ -1,0 +1,20 @@
+1-Para isso preciso rodar esse comando:
+
+SELECT colunas
+FROM tabela
+INTO OUTFILE 'caminho/arquivo.csv'
+FIELDS TERMINATED BY 'delimitador'
+ENCLOSED BY 'caractere'
+LINES TERMINATED BY 'tipo_quebra';
+
+Ele vai consultar as colunas desejadas de uma tabela e inserí-las dentro de um arquivo que deve ser informado após o INTO OUTFILE.
+
+FIELDS TERMINED BY -> OPCIONAL -> Coloca qual vai ser o separador de cada registro na Linha
+ENCLOSED BY ' "" ' -> OPCIONAL -> Coloca quê caractere vai englobar o Campo ( ex.: "Maria","Luiza" )
+
+Ex.: SELECT ID_autor, Nome_Autor, Sobrenome_Autor
+FROM tbl_autores
+INTO OUTFILE 'C:/SQL/autores_bkp.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';

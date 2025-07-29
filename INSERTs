@@ -1,0 +1,5 @@
+INSERT INTO nome_tabela (coluna1, coluna2,...)
+VALUES (valor1, valor2,...);
+
+INSERT INTO nome_tabela(coluna1, coluna2, ...)
+VALUES (valor1, valor2,...), (valor1,valor2,...) ,

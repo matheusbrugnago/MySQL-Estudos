@@ -1,0 +1,20 @@
+[CONSTRAINT nome_chave_estrangeira] FOREIGN KEY (nomes de colunas separados por vírgulas)
+REFERENCES nome_tabela_pai (nomes de colunas separados por vírgulas na tabela pai)
+[ON DELETE ação referencial]
+[ON UPDATE ação referencial];
+
+ON DELETE : Quando for excluido um registro da Tabela Pai, é efetuado a ação referencial
+ON UPDATE : Quando for atualizado um registro da Tabela Pai, é efetuado a ação referencial
+
+CASCADE : Toma a ação de excluir ou atualizar registros na Tabela Filha a partir do ON DELETE ou ON UPDATE
+RESTRICT : Toma a ação de impedir uma exclusão ou alteração na tabela Pai, caso ainda haja registros na Tabela Filha
+SET NULL : Toma a ação para o campo ficar NULL na tabela Filha, se esse for excluido ou alterado da tabela Pai
+
+Como aplicar?
+
+. . .
+ CONSTRAINT fk_id_pai FOREIGN KEY (ID_Pai)
+ REFERENCES Pai(ID_Pai)
+ ON DELETE CASCADE
+ ON UPDATE CASCADE
+. . .

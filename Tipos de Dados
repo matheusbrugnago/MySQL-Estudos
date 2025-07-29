@@ -1,0 +1,10 @@
+INT - Inteiros
+TINYINT, SMALLINT - Pequenos Inteiros
+BIGINT - Grandes Inteiros
+DECIMAL( M , D ) - M é o número de caracteres e D o número de casas decimais. M vai até 65 e D até 30.
+VARCHAR( M ) - String com tamanho Variável até 65535 caracteres ( M )
+BLOB / MEDIUMBLOB / TINYBLOB - Tipo que armazena grande quantidade de Dados, Lista de Objetos
+DATE - Data do tipo YYYY-MM-DD
+DATETIME - Data e hora do tipo YYYY-MM-DD HH:MM:SS
+TIME - Hora apenas no Formato HH:MM:SS
+

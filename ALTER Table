@@ -32,3 +32,9 @@ DROP PRIMARY KEY;
 ALTER TABLE tbl_Livro
 MODIFY COLUMN ID_Autor SMALLINT;
 
+7-Alterar o Nome da Coluna para um novo
+
+ALTER TABLE nome_da_tabela
+CHANGE nome_atual novo_nome [Tipo de Dados];
+
+

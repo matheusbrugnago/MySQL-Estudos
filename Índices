@@ -1,0 +1,19 @@
+Quando gero um Índice ao gerar uma Tabela:
+
+CREATE TABLE tbl_Editoras (
+IdEditora SMALLINT PRIMARY KEY AUTO_INCREMENT,
+NomeEditora VARCHAR(40) NOT NULL,
+INDEX (NomeEditora)
+);
+
+Quando gero um Índice em uma tabela já existente:
+
+CREATE INDEX idx_editora ON tbl_Editoras(NomeEditora);
+
+Para expor que FOI REALMENTE usado um índice para X coluna, podemos usar:
+
+EXPLAIN SELECT * FROM tbl_Editoras WHERE NomeEditora = 'Springer';
+
+Além disso, para excluir um índice, utilizamos:
+
+DROP INDEX nome_índice ON tabela

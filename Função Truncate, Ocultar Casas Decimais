@@ -1,0 +1,6 @@
+Ao invés de Arredondar as Casas Decimais, é feito uma retirada das casas decimais que desejo, com isso faço um TRUNCATE () :
+
+SELECT TRUNCATE(valor,casas decimais) -> valor='valor informado' , casas decimais='casas a considerar'
+
+SELECT TRUNCATE(52.69863, 0) AS Truncado; Vai trazer apenas '52' e não arredonda
+

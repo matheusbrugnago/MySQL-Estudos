@@ -1,0 +1,9 @@
+Arredonda um valor numérico até um número especificado de casas decimais.
+ROUND(valor, casas_decimais)
+
+EX.: SELECT ROUND(52.36956, 2) AS Arredondado --> 52.37
+
+Posso utilizar o ROUND em cima do Valor médio,Count,Soma,Max ou Min por exemplo:
+
+SELECT ROUND(AVG(PrecoLivro), 2) AS 'Preço Médio dos Livros'
+FROM tbl_Livros;

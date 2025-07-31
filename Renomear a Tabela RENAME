@@ -1,0 +1,3 @@
+RENAME table tbl_categorias to tbl_categoria
+
+-> Ela renomea a Tabela de acordo com o comando

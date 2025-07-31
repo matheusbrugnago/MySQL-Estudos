@@ -1,0 +1,16 @@
+O Replace é utilizado para substituir um registro na Tabela a partir de uma chave primária, ou se não existe, inserir um novo.
+
+Sintaxe:
+
+REPLACE [INTO] nomeTabela(lista_colunas)
+VALUES(lista_valores);
+
+Ex.:
+
+REPLACE INTO paises(IdPais, nomePais, nomeCapital)
+VALUES (7, 'Espanha', 'Madrid');
+
+Se a coluna de IdPais = 7 existir, então vai substituir os valores de acordo com o que está em nomePais e nomeCapital no Comando
+Caso não exista, ele vai inserir dentro da Tabela( pode-se colocar ou não o ID )
+
+OBSERVAÇÃO: ' SEMPRE COLOCAR PARA TRAZER A CHAVE PRIMÁRIA NA BUSCA, DE PREFERÊNCIA '

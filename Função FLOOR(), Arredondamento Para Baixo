@@ -1,0 +1,8 @@
+Quando eu quero arrdeondar para o Valor Baixo mais próximo Inteiro, utilizo da opção de FLOOR ( ):
+
+FLOOR(número)
+Ex.:
+
+SELECT PrecoLivro AS 'Preco Real', FLOOR(PrecoLivro) AS 'Reais sem centavos'
+FROM tbl_Livros
+WHERE PrecoLivro > 200.00;

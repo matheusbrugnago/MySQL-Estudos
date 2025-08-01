@@ -1,0 +1,11 @@
+É utilizado o LIKE ou NOT LIKE para buscar valores não exatos. Por exemplo, quero consultar todos os países que se iniciem por B:
+
+SELECT * FROM PAISES where nomePais LIKE 'B%'
+
+Ou ainda, quero ter todos os países que não comecem por B:
+
+SELECT * FROM PAISES where nomePais NOT LIKE 'B%'
+
+Ainda, se quero trazer todos os países que o segundo caractere seja A:
+
+SELECT * FROM PAISES where nomePais LIKE '_a%'

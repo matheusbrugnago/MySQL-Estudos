@@ -1,0 +1,27 @@
+Sempre quando quero concatenar colunas em uma consulta SQL, eu posso utilizar a Função CONCAT :
+
+SELECT CONCAT(‘Fábio ‘, ‘dos Reis’) AS ‘Meu Nome’;  ->  'Fábio dos Reis'
+
+SELECT CONCAT(Nome_autor, ‘ ‘, Sobrenome_autor) AS ‘Nome Completo’ -> 'Stephen Hawking' 
+FROM tbl_autores;
+
+SELECT CONCAT('Eu gosto do livro ', Nome_Livro)
+FROM tbl_Livro WHERE ID_autor = 2; -> 'Eu gosto do Livro Moreninha'
+
+Porém nesses casos, se ao menos uma coluna for NULL, não irá trazer resultado, então utilizamos o IFNULL para trazer um valor padrão
+caso esteja como NULL:
+
+IFNULL (valor, substituição)
+
+SELECT CONCAT('A quantidade adquirida é ', ' ', IFNULL(quantidade, 0))
+FROM teste_nulos
+WHERE  item = 'Teclado';      -->   SE a quantidade for Nula, irá trazer Zero
+
+O que pode ser feito também é aplicar um COALESCE que basicamente traz o primeiro valor não nulo dentro dos parênteses:
+
+... COALESCE ( NULL , NULL , quantidade, 0 ) --> Ele roda todos os valores dentro do Parênteses para ver tem um NÃO NULO, no caso o Zero
+
+SELECT CONCAT('A quantidade adquirida é ', ' ', COALESCE(NULL, quantidade, NULL, 0))
+FROM teste_nulos
+WHERE  item = 'Teclado';
+

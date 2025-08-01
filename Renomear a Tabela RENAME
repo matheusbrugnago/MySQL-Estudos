@@ -1,3 +1,5 @@
+RENAME TABLE table1 to table2
+Ex.:
 RENAME table tbl_categorias to tbl_categoria
 
 -> Ela renomea a Tabela de acordo com o comando

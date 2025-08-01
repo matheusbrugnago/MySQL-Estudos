@@ -35,3 +35,7 @@ Mostrar Todas as Views utilizadas:
 
 SHOW FULL TABLES
 WHERE TABLE_TYPE LIKE 'VIEW';
+
+Para Dropas uma VIEW:
+
+DROP VIEW vw_LivrosAutores;

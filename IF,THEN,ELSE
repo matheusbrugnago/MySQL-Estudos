@@ -1,0 +1,24 @@
+Sintaxe padrão para o IF/THEN/ELSE:
+
+IF condicao THEN lista_declarações
+  [ELSEIF condicao THEN lista_declarações]
+  . . .
+  [ELSE lista_declarações]
+END IF;
+
+---------------------------------------------
+DELLIMITER //
+CREATE FUNCTION calcula_imposto(salario DEC(8,2))
+RETURNS DEC( 8,2 )
+BEGIN
+  DECLARE valor_imposto DEC( 8,2 );
+  IF salario < 1000.00 THEN
+      SET valor_imposto = 0.00
+  ELSEIF salario < 2000.00 THEN
+      SET valor_imposto = salario * 0.15
+  ELSE
+      SET valor_imposto = salario * 0.27
+  END IF
+  RETURN valor_imposto;
+END//
+DELLIMITER;

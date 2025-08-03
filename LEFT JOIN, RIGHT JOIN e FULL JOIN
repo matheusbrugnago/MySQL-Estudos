@@ -1,0 +1,29 @@
+LEFT JOIN :
+
+SELECT colunas
+FROM tabela_esq
+LEFT (OUTER) JOIN tabela_dir
+ON tabela_esq.coluna=tabela_dir.coluna;
+
+SELECT * FROM tbl_autores
+LEFT JOIN tbl_Livro
+ON tbl_Livro.ID_Autor = tbl_autores.ID_Autor;    --> Basicamente todas as colunas que estiverem à esquerda vai vir mesmo sendo da Direita Vazia
+
+Caso queira trazer os resultados que não possuem correspondência, ou seja com a coluna vazia, poderia se utilizar:
+
+SELECT * FROM tbl_autores
+LEFT JOIN tbl_Livro
+ON tbl_Livro.ID_Autor = tbl_autores.ID_Autor
+WHERE tbl_Livro.ID_Autor IS NULL   --> Traz apenas os registros da Tabela Autores, que não possuem na Tabela Livro
+
+RIGHT JOIN:
+
+SELECT colunas
+FROM tabela_esq
+RIGHT (OUTER) JOIN tabela_dir
+ON tabela_esq.coluna=tabela_dir.coluna;
+
+SELECT * FROM tbl_Livro AS Li
+RIGHT JOIN tbl_editoras AS Ed
+ON Li.ID_editora = Ed.ID_editora; --> Mesma ideia que o LEFT JOIN, porém ele faz com que a Coluna da Direita traz independente se há registro na Esquerda
+

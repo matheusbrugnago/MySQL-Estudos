@@ -1,0 +1,4 @@
+LEFT(string, n) – Retorna os n caracteres à esquerda de uma string passada como argumento, ou NULL se um dos argumentos for NULL.
+SUBSTRING(string, pos) – Retorna uma substring a partir de uma string passada como argumento, iniciando na posição pos.
+
+SELECT CONCAT ( (LEFT(text,1), ' - ',(SUBSTRING(text,2))) FROM TBL_Livro

@@ -1,0 +1,8 @@
+CEILING()   Arredondar para cima
+FLOOR()     Arredondar para baixo
+PI() Retorna o valor de Pi
+POW(x,y) Retorna x elevado a y
+SQRT()   Raiz quadrada de um argumento
+SIN() Retorna o seno de um número dado em radianos
+HEX() Retorna a representação hexadecimal de um valor decimal.
+

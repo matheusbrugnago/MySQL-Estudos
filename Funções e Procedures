@@ -1,0 +1,39 @@
+Sintaxe para Criar uma Função, basicamente com o intuito de voltar um valor:
+
+CREATE FUNCTION nome_função (parâmetros)
+RETURNS tipo_dados
+DETERMINISTIC
+NO SQL
+código_da_função;
+
+Como invocar uma Função:
+SELECT nome_função(parâmetros);
+----------------------------------------------------------------------------
+Exemplo:
+
+CREATE FUNCTION fn_teste (a DECIMAL(10,2), b INT)
+RETURNS INT
+DETERMINISTIC
+NO SQL
+RETURN a * b;
+
+Para Invocar a Função:
+
+SELECT fn_teste(2.5, 4) AS Resultado;
+____________________________________________________________________________
+
+Exemplo 2:
+
+CREATE FUNCTION fn_verPreço (a SMALLINT)
+RETURNS VARCHAR(60)
+RETURN
+(SELECT CONCAT('O preço do livro ', Nome_Livro, ' é ', Preco_Livro)
+FROM tbl_livro
+WHERE ID_livro = a);
+
+SELECT fn_verPreço (9)
+____________________________________________________________________________
+
+Para dropar uma Função é simples: 
+
+DROP FUNCTION nome_função;

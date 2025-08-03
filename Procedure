@@ -1,0 +1,14 @@
+Sintaxe:
+
+DELIMITER //
+
+CREATE PROCEDURE nome_da_procedure (parâmetros)
+BEGIN
+   -- Bloco de instruções SQL
+END //
+
+DELIMITER ;
+
+Para invocar:
+
+CALL nome_da_procedure ( parâmetros )

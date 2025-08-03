@@ -1,0 +1,20 @@
+O Union é o Tipo de União entre linhas consultadas ou seja, ele não encontra o ponto em comum, e sim agrega os que já existem:
+
+SELECT declaração_1
+UNION [ALL}
+SELECT declaração_2
+UNION [ALL}
+SELECT declaração_3 ...
+[ORDER BY colunas]
+
+SELECT L.NomeLivro Livro, L.PrecoLivro 'Preço Normal', L.PrecoLivro * 0.90 'Preço Ajustado', A.Assunto
+FROM tbl_Livros L INNER JOIN tbl_Assuntos A
+ON L.IdAssunto = A.IdAssunto
+WHERE L.PrecoLivro > 200.00
+UNION
+SELECT L.NomeLivro Livro, L.PrecoLivro 'Preço Normal', L.PrecoLivro * 1.15 'Preço Ajustado', A.Assunto
+FROM tbl_Livros L INNER JOIN tbl_Assuntos A
+ON L.IdAssunto = A.IdAssunto
+WHERE A.Assunto = 'Eletrônica'
+ORDER BY 'Preço Ajustado' DESC;
+
